@@ -16,19 +16,19 @@
 </head>
 <body>
 	<div class="container">
-		<div style="padding:20px;" class="header">
+		<nav style="postition:absolute"class="navbar navbar-light bg-light">
 		
-			<form action="/search" method="post">
+			<form style="margin:10px" class="form-inline" action="/search" method="post">
 				
-				<input style="display:inline-block" type= "text" placeholder="Search User" class="form-control col-6"/>
-				<input type="submit" value="Search" class="btn btn-primary"/>
-				<a style="float:right" href="/profile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+				<input type= "text" name="user" placeholder="Search User" class="form-control col-6"/>
+				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
 									
 			</form>
+			<a style="float:right" href="/profile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
 			
-		</div>
-			<div data-lorem="p">
-			  <span class="sticky">a</span>
+		</nav>
+			<div  data-lorem="p">
+			  <span class="sticky">User 1</span>
 			  <br>
 			  <br>
 			  <br>
@@ -41,7 +41,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">b</span>
+			  <span class="sticky">User 2</span>
 			  <br>
 			  <br>
 			  <br>
@@ -54,7 +54,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">c</span>
+			  <span class="sticky">User 3</span>
 			  <br>
 			  <br>
 			  <br>
@@ -67,7 +67,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">d</span>
+			  <span class="sticky">User 4</span>
 			  <br>
 			  <br>
 			  <br>
@@ -80,7 +80,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">e</span>
+			  <span class="sticky">User 5</span>
 			  <br>
 			  <br>
 			  <br>
@@ -93,7 +93,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">f</span>
+			  <span class="sticky">User 6</span>
 			  <br>
 			  <br>
 			  <br>
@@ -106,7 +106,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">g</span>
+			  <span class="sticky">User 7</span>
 			  <br>
 			  <br>
 			  <br>
@@ -119,7 +119,7 @@
 			  <br>
 			</div>
 			<div data-lorem="p">
-			  <span class="sticky">h</span>
+			  <span class="sticky">User 8</span>
 			  <br>
 			  <br>
 			  <br>
@@ -133,23 +133,33 @@
 			</div>
 		
 		<div data-lorem="p">
-			  <span class="sticky">g</span>
-			  
+			  <span class="sticky">User 9</span>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
 		</div>
-		<div style="margin-left:10px" class="row">
-			<div class="col">
-				<img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/>
+			<div style="position:fixed;bottom:0;background: #999;width:78%">
+				<div class="row">
+				<div class="col">
+					<img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/>
+				</div>
+				<div class="col">				
+					<img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/>
+				</div>
+				<div class="col">
+					<img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/>
+				</div>
+				<div class="col">
+					<img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/>
+				</div>
 			</div>
-			<div class="col">				
-				<img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/>
-			</div>
-			<div class="col">
-				<img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/>
-			</div>
-			<div class="col">
-				<img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/>
-			</div>
-			
 		</div>
 	</div>
 </body>

@@ -4,7 +4,7 @@
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
-  position: sticky;
+  position: static;
   top: 0;
   left: 0;
   right: 0;

@@ -13,7 +13,23 @@
 </head>
 <body>
 	<div class="container">
-		<h1>${user.first_name}</h1>
+		<h1>There are ${users.size()} results:</h1>
+		<table>
+		<thead>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Goal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="users" items="${user}">
+				<tr>
+					<td scope="row"><a href="/user/${user.id}">${user.first_name} ${user.last_name}</a>
+					<td scope="row">${user.goal}
+				</tr>
+			</c:forEach>
+		</tbody>
+		</table>	
 	</div>
 </body>
 </html>
