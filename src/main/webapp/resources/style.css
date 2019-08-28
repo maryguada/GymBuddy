@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  background: #999;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* For aesthetics only */
+body {
+  margin: 0;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}

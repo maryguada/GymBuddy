@@ -41,7 +41,7 @@ public class Message {
     }
 
 	public Message(Long id, @Size(min = 10, max = 255) String message, User user, User friend) {
-		super();
+		
 		this.id = id;
 		this.message = message;
 		this.user = user;
