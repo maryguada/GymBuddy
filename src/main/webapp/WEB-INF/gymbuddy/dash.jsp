@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <%@ page isErrorPage = "true" %>
 
 <!DOCTYPE html>
@@ -13,14 +15,17 @@
 </head>
 <body>
 	<div class="container">
-		<form:form action="/search" modelAttribute="newShowObj" method="post">
+		<div style="padding:20px;" class="header">
+		
+			<form action="/search" method="post">
+				
+				<input style="display:inline-block" type= "text" placeholder="Search" class="form-control col-6"/>
+				<input type="submit" value="Search" class="btn btn-primary"/>
+				<a style="float:right" href="/profile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+									
+			</form>
 			
-			<form:label path="name">Title: </form:label>
-			<p><form:errors class="alert alert-danger" path="name"/></p>
-			<form:input type= "text" value="${newShowObj.name}" path="name" class="form-control col-6"/>
-			
-			<input type="submit" value="Create" class="btn btn-primary"/>					
-		</form:form>
+		</div>
 	</div>
 </body>
 </html>
