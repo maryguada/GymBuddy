@@ -1,10 +1,10 @@
-package com.codingdojo.gymbudy.validator;
+package com.codingdojo.gymbuddy.validator;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.codingdojo.gymbudy.models.User;
+import com.codingdojo.gymbuddy.models.User;
 
 
 @Component

@@ -1,4 +1,4 @@
-package com.codingdojo.gymbudy.controller;
+package com.codingdojo.gymbuddy.controller;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.codingdojo.gymbudy.models.User;
-import com.codingdojo.gymbudy.services.UserService;
-import com.codingdojo.gymbudy.validator.UserValidator;
+import com.codingdojo.gymbuddy.models.User;
+import com.codingdojo.gymbuddy.services.UserService;
+import com.codingdojo.gymbuddy.validator.UserValidator;
 
 @Controller
 public class UserController {

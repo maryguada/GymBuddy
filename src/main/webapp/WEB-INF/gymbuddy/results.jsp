@@ -22,10 +22,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="users" items="${user}">
+			<c:forEach var="user" items="${users}">
 				<tr>
-					<td scope="row"><a href="/user/${user.id}">${user.first_name} ${user.last_name}</a>
-					<td scope="row">${user.goal}
+					<td scope="row"><a href="/profile/${user.id}">${user.firstName} ${user.lastName}</a>
+					<td scope="row">${user.goals}
 				</tr>
 			</c:forEach>
 		</tbody>

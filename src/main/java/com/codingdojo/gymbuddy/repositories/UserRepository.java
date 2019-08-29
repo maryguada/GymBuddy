@@ -1,16 +1,19 @@
-package com.codingdojo.gymbudy.repositories;
+package com.codingdojo.gymbuddy.repositories;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.codingdojo.gymbudy.models.User;
+import com.codingdojo.gymbuddy.models.User;
 
 @Repository
 public interface UserRepository extends CrudRepository <User,Long>{
     User findByEmail(String email);
 
-	List<User> findByUserContaining(String user);
+	List<User> findByFirstNameContaining(String user);
+
+	List<User> findAll();
+	
 
 }

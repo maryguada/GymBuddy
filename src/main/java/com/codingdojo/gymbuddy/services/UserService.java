@@ -1,5 +1,6 @@
-package com.codingdojo.gymbudy.services;
+package com.codingdojo.gymbuddy.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -8,8 +9,8 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.codingdojo.gymbudy.models.User;
-import com.codingdojo.gymbudy.repositories.UserRepository;
+import com.codingdojo.gymbuddy.models.User;
+import com.codingdojo.gymbuddy.repositories.UserRepository;
 
 
 
@@ -73,6 +74,11 @@ public class UserService {
 		// TODO Auto-generated method stub
 		userRepository.save(user);
 
+	}
+
+	public List<User> findAllUsers() {
+		// TODO Auto-generated method stub
+		return userRepository.findAll();
 	}
 
 

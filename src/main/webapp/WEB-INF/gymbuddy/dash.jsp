@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="<c:url value="/resources/style.css" />" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -24,143 +25,42 @@
 				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
 									
 			</form>
-			<a style="float:right" href="/profile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+			<p style="margin-left:550px;margin-top:15px;">Welcome, ${user.firstName}</p>
+			<a  href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
 			
 		</nav>
-			<div  data-lorem="p">
-			  <span class="sticky">User 1</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 2</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 3</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 4</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 5</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 6</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 7</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
-			<div data-lorem="p">
-			  <span class="sticky">User 8</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			</div>
 		
-		<div data-lorem="p">
-			  <span class="sticky">User 9</span>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-			  <br>
-		</div>
-			<div style="position:fixed;bottom:0;background: #999;width:78%">
+		
+		<c:forEach items="${allusers}" var="user">
+			<div data-lorem="p">
+			  <a href="/profile/${user.id}"><span class="sticky">${user.firstName} ${user.lastName}</span></a>
+			  <p>Bench Press: ${user.benchpress}</p>
+			  <p>Dead Lift: ${user.deadlift}</p>
+			  <p>Squat: ${user.squat}</p>
+			  
+			</div>
+			<div style="height:30px">
+			</div>
+		</c:forEach>
+			<footer>
+			<div style="position:fixed;bottom:0;background: #999;width:78%"	>
 				<div class="row">
 				<div class="col">
-					<img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/>
+					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
 				</div>
 				<div class="col">				
-					<img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/>
+					<a href="/message"><img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/></a>
 				</div>
 				<div class="col">
-					<img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/>
+					<a href ="/addpicture"><img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/></a>
 				</div>
 				<div class="col">
-					<img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/>
+					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
 				</div>
 			</div>
 		</div>
+		</footer>
 	</div>
 </body>
 </html>
