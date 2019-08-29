@@ -71,8 +71,10 @@ public class GymController {
 /////////////////////////////profiles////////////////////////////////////
 	@GetMapping("/profile/{id}")
 	public String profiles(@PathVariable("id") Long id, Model model,HttpSession session, @ModelAttribute("user")User user) {
-		User u = appServ.findThisUser(id);
+		User u = (User)session.getAttribute("user");
 		model.addAttribute("user", u);
+		User thisUser = appServ.findThisUser(id);
+		model.addAttribute("thisUser", thisUser);
 	return "gymbuddy/profiles.jsp";
 	}
 ///////////////////////////////////////////////////////////////////////////
@@ -85,7 +87,6 @@ public class GymController {
 	public String show(@PathVariable("id") Long id, Model model, HttpSession session,
 		@ModelAttribute("msg") Message message) {
 		User u = (User)session.getAttribute("user");
-		model.addAttribute("user", u);
 		model.addAttribute("sender_id", (Long)session.getAttribute("userId"));
 //		model.addAttribute("messages", users.getMessagesRec());
 		return "gymbuddy/wall.jsp";

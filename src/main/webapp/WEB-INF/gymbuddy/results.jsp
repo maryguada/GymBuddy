@@ -25,11 +25,26 @@
 			<c:forEach var="user" items="${users}">
 				<tr>
 					<td scope="row"><a href="/profile/${user.id}">${user.firstName} ${user.lastName}</a>
-					<td scope="row">${user.goals}
+					<td scope="row">${user.goals}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 		</table>	
+		<div style="position:fixed;bottom:0;background: #999;width:78%"	>
+				<div class="row">
+				<div class="col">
+					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">				
+					<a href="/message"><img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">
+					<a href ="/addpicture"><img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">
+					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
+				</div>
+			</div>
 	</div>
 </body>
 </html>

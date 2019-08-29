@@ -27,12 +27,13 @@
 				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
 									
 			</form>
-			<p style="margin-left:550px;margin-top:15px;">Welcome, ${user.firstName}</p>
+			<p style="margin-left:480px;margin-top:15px;">Welcome, ${user.firstName}</p>
+			<a  href="dash"><img src='<c:url value="https://cdn3.iconfinder.com/data/icons/block/32/dashboard-512.png"/>' height=46px width=46px/></a>
 			<a  href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
 			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
 			
 		</nav>
-        <a href="/dash">Back</a>
+        <a class="btn btn-warning" href="/dash">Back</a>
         <div class="col-md-6">
         <div class = "form-group">
             <h3>Message Wall</h3>
@@ -52,6 +53,21 @@
             <br><p><form:errors path="msg.*"/></p>
             </div>
         </div>
+        <div style="position:fixed;bottom:0;background: #999;width:78%"	>
+				<div class="row">
+				<div class="col">
+					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">				
+					<a href="/message"><img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">
+					<a href ="/addpicture"><img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/></a>
+				</div>
+				<div class="col">
+					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
+				</div>
+			</div>
     </div>
 </body>
 </html>
