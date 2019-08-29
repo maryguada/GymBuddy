@@ -26,7 +26,7 @@
 									
 			</form>
 			<p style="margin-left:550px;margin-top:15px;">Welcome, ${user.firstName}</p>
-			<a  href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+			<a href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
 			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
 			
 		</nav>
@@ -34,13 +34,11 @@
 		
 		<c:forEach items="${allusers}" var="user">
 			<div data-lorem="p">
-			  <a href="/profile/${user.id}"><span class="sticky">${user.firstName} ${user.lastName}</span></a>
+			  <a href="/profile/${user.id}"><span class="sticky">${user.firstName} ${user.lastName}	<a class="btn btn-primary" href="/user/${user.id}">Message</a></span></a>
 			  <p>Bench Press: ${user.benchpress}</p>
 			  <p>Dead Lift: ${user.deadlift}</p>
 			  <p>Squat: ${user.squat}</p>
 			  
-			</div>
-			<div style="height:30px">
 			</div>
 		</c:forEach>
 			<footer>
@@ -60,7 +58,6 @@
 				</div>
 			</div>
 		</div>
-		</footer>
 	</div>
 </body>
 </html>

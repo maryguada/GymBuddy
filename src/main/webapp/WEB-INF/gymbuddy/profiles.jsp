@@ -13,6 +13,19 @@
 </head>
 <body>
 	<div class="container">
+		<nav style="postition:absolute"class="navbar navbar-light bg-light">
+		
+			<form style="margin:10px" class="form-inline" action="/search" method="post">
+				
+				<input type= "text" name="user" placeholder="Search User" class="form-control col-6"/>
+				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
+									
+			</form>
+			<p style="margin-left:550px;margin-top:15px;">Welcome, ${user.firstName}</p>
+			<a  href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
+			
+		</nav>
 	<h1>User profile</h1>
 	    <h1>Basic info</h1>
 	    
@@ -21,7 +34,7 @@
 		<div class="col-6">
 		<p>First name:</p><p>${user.firstName}</p>
 		<p>Last name:</p><p>${user.lastName}</p>
-		<p>Address:</p> <P> ${user.address} </P>
+		<p>Address:</p> <P> ${user.address}</P>
 		<p>Age:</p>   <p>${user.age}</p> 
 		<p>Gender:</p>  <p>${user.sex}</p> 
 		</div>

@@ -88,7 +88,7 @@ public class GymController {
 		model.addAttribute("user", u);
 		model.addAttribute("sender_id", (Long)session.getAttribute("userId"));
 //		model.addAttribute("messages", users.getMessagesRec());
-		return "gymbuddy/friend.jsp";
+		return "gymbuddy/wall.jsp";
 	}
 	///////////////////// Send Message To Friends ////////////////////////////////////////////////
 	@PostMapping("/user/{id}/addmsg")
@@ -101,7 +101,7 @@ public class GymController {
 		if (result.hasErrors()) {
 		System.out.println(result.getAllErrors());
 		model.addAttribute("error", "Invalid Credentials. Please try again.");
-		return "gymbuddy/friend.jsp";
+		return "gymbuddy/wall.jsp";
 		} else {
 		msg.setReceiver(u);
 		msg.setId(null);
