@@ -88,7 +88,7 @@ public class GymController {
 		@ModelAttribute("msg") Message message) {
 		User u = (User)session.getAttribute("user");
 		model.addAttribute("sender_id", (Long)session.getAttribute("userId"));
-//		model.addAttribute("messages", users.getMessagesRec());
+		model.addAttribute("messages", u.getMessagesRec());
 		return "gymbuddy/wall.jsp";
 	}
 	///////////////////// Send Message To Friends ////////////////////////////////////////////////
@@ -113,6 +113,27 @@ public class GymController {
 	return "redirect:/user/{id}";
 	}
 	}
+	//////////////////////////Add Friend/////////////////////////////////
+	@GetMapping("/addfriend/{id}")
+	public String addfriend(@PathVariable("id") Long id, @ModelAttribute("newfriendObj") User user,HttpSession session, Model model) {
+		User u = (User)session.getAttribute("user");
+		model.addAttribute("user", u);
+		List<User> thisFriend = appServ.findThisFriend(id);
+		model.addAttribute("thisUser", thisFriend);
+		u.setFriends((List<User>) thisFriend);
+		return "gymbuddy/friends.jsp";
+	}
 	
+	///////////////////////////////MAP///////////////////////////////////
+	@GetMapping("/map")
+	public String map() {
+	return "/templates/gymNearby.jsp";
 	
+}
+	///////////////////////////////Users nearby/////////////////////////
+	@GetMapping("/usersnearby")
+	public String getusersnearby() {
+	return "/templates/usersNearby.jsp";
+	
+}
 }

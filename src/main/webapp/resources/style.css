@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.sticky {
-  position: -webkit-sticky;
+.stick {
+/*   position: -webkit-sticky;
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
-  position: sticky;
-  top: 0;
+  position: relative; */
+  top: 10;
   left: 0;
   right: 0;
   display: block;
@@ -69,4 +69,37 @@ body {
 .youtube {
   background: #bb0000;
   color: white;
+}
+
+/* /* Style the navbar */
+#navbar {
+  overflow: hidden;
+     background-color: white;
+ 	max-width:1000px;
+}
+
+/* Navbar links
+ */#navbar a {
+   float: left;
+/*   display: block;
+ */  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content
+ */.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position
+ */.sticky {
+  position: fixed;
+  top: 0;
+  width: 92%;
+}
+
+ .sticky + .content {
+  padding-top: 40px;
 }

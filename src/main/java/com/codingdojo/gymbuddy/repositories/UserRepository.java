@@ -13,7 +13,7 @@ public interface UserRepository extends CrudRepository <User,Long>{
 
 	List<User> findByFirstNameContaining(String user);
 
-	List<User> findAll();
+	List<User> findTop10ByOrderByDistanceAsc();
 	
 
 }

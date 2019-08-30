@@ -42,7 +42,17 @@ public class appService {
 
 	public List<User> findAllUsers() {
 		// TODO Auto-generated method stub
-		return userRepo.findAll();
+		return userRepo.findTop10ByOrderByDistanceAsc();
+	}
+
+	public List<User> findThisFriend(Long id) {
+		// TODO Auto-generated method stub
+		Optional <User> optFriend = userRepo.findById(id);
+		if (optFriend.isPresent()) {
+			return (List<User>) optFriend.get();
+		}else{
+			return null;
+		}
 	}
 
 }

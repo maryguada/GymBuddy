@@ -8,12 +8,40 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="<c:url value="/resources/style.css" />" rel="stylesheet" type="text/css" />
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>User profiles</title>
+	<style>
+		body {
+			background-image:url("/img/background.jpg");
+			background-repeat: repeat;
+	  		background-size: hover;
+		}
+		.form{
+			margin: auto;
+	  		width: 50%;
+		}
+		.form-group p{
+			color:white;
+		}
+		.form-group h1{
+			color:white;
+		}
+		.content {
+		
+		background-color:white;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
-		<nav style="postition:absolute"class="navbar navbar-light bg-light">
+	<div class="row">
+	    <img  style = "width:85px; height:65px; margin-top:10px" src="/img/GymBuddyLogoFinalW.png">
+	    <h1 style="font-size:60px; font-weight:bold; color:white; margin-left:-8px">ymbuddy.</h1>
+	    </div>
+		<div id="navbar">
+		
+		<nav  class="navbar navbar-light bg-light">
 		
 			<form style="margin:10px" class="form-inline" action="/search" method="post">
 				
@@ -21,17 +49,22 @@
 				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
 									
 			</form>
-			<p style="margin-left:480px;margin-top:15px;">Welcome, ${user.firstName}</p>
-			<a  href="dash"><img src='<c:url value="https://cdn3.iconfinder.com/data/icons/block/32/dashboard-512.png"/>' height=46px width=46px/></a>
-			<a  href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
+			<p style="margin-left:0px;margin-top:15px;">Welcome, ${user.firstName}</p>
+			<a class="active" href="/dash"><img src='<c:url value="http://simpleicon.com/wp-content/uploads/dashboard.png"/>' height=46px width=46px/></a>
+			<a href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
 			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
 			
 		</nav>
-	<h1>User profile</h1>
-	    <h1>Basic info</h1>
+		
+		</div>
+		
+	
+	    
 	    
 	    <div class="row">
 		<div class="form-group">
+		<h1>User profile</h1>
+		<h1>Basic info</h1>
 		<div class="col-6">
 		<p>First name:</p><p>${thisUser.firstName}</p>
 		<p>Last name:</p><p>${thisUser.lastName}</p>
@@ -69,5 +102,7 @@
 			</div>
 		
 	</div>
+			<script type="text/javascript" src="/resources/effect.js"></script>
+	
 </body>
 </html>
