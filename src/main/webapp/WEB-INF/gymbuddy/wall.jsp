@@ -86,7 +86,7 @@
             <br><p><form:errors path="msg.*"/></p>
             </div>
         </div>
-        <div style="position:fixed;bottom:0;background: #999;width:78%"	>
+		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:82.8%">
 				<div class="row">
 				<div class="col">
 					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
@@ -101,6 +101,7 @@
 					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
 				</div>
 			</div>
+    </div>
     </div>
     		<script type="text/javascript" src="/resources/effect.js"></script>
     

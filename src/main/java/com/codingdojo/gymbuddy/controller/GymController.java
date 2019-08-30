@@ -136,4 +136,9 @@ public class GymController {
 	return "/templates/usersNearby.jsp";
 	
 }
+	///////////////////////add picture////////////////////////
+	@GetMapping("/addpicture")
+	public String addpic() {
+		return "/gymbuddy/addpicture.jsp";
+}
 }

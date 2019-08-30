@@ -44,7 +44,7 @@
 	    <h1 style="font-size:60px; font-weight:bold; color:white; margin-left:-8px">ymbuddy.</h1>
 	    <p style="color:white;margin-top:40px;margin-left:120px;float:right">Welcome, ${user.firstName}</p>
 	    
-	    </div>
+	  </div>
 		<div id="navbar">
 		
 		<nav  class="navbar navbar-light bg-light">
@@ -65,16 +65,79 @@
 		
 		<div class="content">
 		<c:forEach items="${allusers}" var="user">
-			<div data-lorem="p">
-			  <h4><a href="/profile/${user.id}"><span class="stick">${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+		
+		<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ben.jpeg"/>
+			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
 			  <p>Bench Press(lbs): ${user.benchpress}</p>
 			  <p>Dead Lift(lbs): ${user.deadlift}</p>
 			  <p>Squat(lbs): ${user.squat}</p>
 			  <p>Goal: ${user.goals}</p>
+			  
 			</div>
+			
+			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/mary.JPG"/>
+			     Mary Naanep<h4 style="float:right">(2 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): 45</p>
+			  <p>Dead Lift(lbs): 45</p>
+			  <p>Squat(lbs): 80</p>
+			  <p>Goal: Gain muscle</p>
+			  
+			</div>
+			
+			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ProfileSmile.jpg"/>
+			     Carl Bishop <h4 style="float:right">(3 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): 300</p>
+			  <p>Dead Lift(lbs): 260</p>
+			  <p>Squat(lbs): 400</p>
+			  <p>Goal: Gain power</p>
+			  
+			</div>
+			
+			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ProfileSmile.jpg"/>
+			     Howard Chen <h4 style="float:right">(3 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): 150</p>
+			  <p>Dead Lift(lbs): 140</p>
+			  <p>Squat(lbs): 150</p>
+			  <p>Goal: Gain muscle and lose weight</p>
+			  
+			</div>
+			
+<%-- 			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:25px;height:25px"src="/img/ben.jpeg"/>
+			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): ${user.benchpress}</p>
+			  <p>Dead Lift(lbs): ${user.deadlift}</p>
+			  <p>Squat(lbs): ${user.squat}</p>
+			  <p>Goal: ${user.goals}</p>
+			  
+			</div>
+			
+			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:25px;height:25px"src="/img/ben.jpeg"/>
+			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): ${user.benchpress}</p>
+			  <p>Dead Lift(lbs): ${user.deadlift}</p>
+			  <p>Squat(lbs): ${user.squat}</p>
+			  <p>Goal: ${user.goals}</p>
+			  
+			</div>
+			
+			<div data-lorem="p">		
+			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:25px;height:25px"src="/img/ben.jpeg"/>
+			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			  <p>Bench Press(lbs): ${user.benchpress}</p>
+			  <p>Dead Lift(lbs): ${user.deadlift}</p>
+			  <p>Squat(lbs): ${user.squat}</p>
+			  <p>Goal: ${user.goals}</p>
+			  
+			</div> --%>
 		</c:forEach>
 		
-		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:83.5%">
+		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:82.8%">
 				<div class="row">
 				<div class="col">
 					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>

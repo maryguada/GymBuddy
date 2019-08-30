@@ -49,7 +49,6 @@
 				<input type="submit" value="Search" class="btn btn-outline-success my-2 my-sm-0"/>
 									
 			</form>
-			<p style="margin-left:0px;margin-top:15px;">Welcome, ${user.firstName}</p>
 			<a class="active" href="/dash"><img src='<c:url value="http://simpleicon.com/wp-content/uploads/dashboard.png"/>' height=46px width=46px/></a>
 			<a href="/myprofile"><img src='<c:url value="https://icon-library.net/images/my-profile-icon-png/my-profile-icon-png-3.jpg"/>' height=40px width=40px/></a>
 			<a href="/logout"><img src='<c:url value="https://image.flaticon.com/icons/svg/55/55023.svg"/>' height=35px width=35px/></a>
@@ -131,7 +130,7 @@
 			        </p>
 			        </div>
 			        
-			        
+			        <div class="content">
 					<div class="form-group">
 					<h1>Stats</h1>
                     <p>
@@ -179,7 +178,7 @@
 			       <br><br><br>
 			    </form:form>
 				
-				<div style="position:fixed;bottom:0;background: #999;width:78%"	>
+		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:82.8%">
 				<div class="row">
 				<div class="col">
 					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
@@ -194,6 +193,7 @@
 					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
 				</div>
 			</div>
+	</div>
 	</div>
 			<script type="text/javascript" src="/resources/effect.js"></script>
 	
