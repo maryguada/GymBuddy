@@ -156,6 +156,7 @@
 			        </p>
 			        <input type="submit" value="Register!" class="btn btn-primary" />
 			    </form:form>
+			    <a href="/login">login</a>
 			   
 				
 	</div>

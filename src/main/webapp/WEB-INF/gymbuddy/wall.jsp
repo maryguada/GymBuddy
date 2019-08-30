@@ -65,14 +65,14 @@
 		</nav>
 		
 		</div>
-		
         <a class="btn btn-warning" href="/dash">Back</a>
+		<div class="content">
         <div class="col-md-6">
         <div class = "form-group">
             <h3>Message Wall</h3>
-            <div style="height: 150px; width: 500px; overflow: auto; outline: solid 1px black;">
+            <div style="height: 120px; max-width: 400px; overflow: auto; outline: solid 1px black;">
                 <c:forEach items="${messages}" var="comment">
-                    <p>${users.firstName} says: ${comment.message}</p>
+                    <p>${user.firstName} says: ${comment.message}</p>
                 </c:forEach>
             </div>
             <br>
@@ -86,6 +86,9 @@
             <br><p><form:errors path="msg.*"/></p>
             </div>
         </div>
+        
+                    <br><br><br><br><br><br><br><br><br><br>
+        
 		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:82.8%">
 				<div class="row">
 				<div class="col">
@@ -101,8 +104,15 @@
 					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
 				</div>
 			</div>
+			 </div>   
+			
     </div>
+        
+    
     </div>
+    <br>
+    </div>
+    
     		<script type="text/javascript" src="/resources/effect.js"></script>
     
 </body>

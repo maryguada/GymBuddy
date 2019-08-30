@@ -67,8 +67,8 @@
 		<c:forEach items="${allusers}" var="user">
 		
 		<div data-lorem="p">		
-			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ben.jpeg"/>
-			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			     <h4><a href="/profile/${user.id}" ><span class="stick" style="border-radius:10px">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ben.jpeg"/>
+			     ${user.firstName} ${user.lastName}<h4 style="float:right">(${user.distance}mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-success" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
 			  <p>Bench Press(lbs): ${user.benchpress}</p>
 			  <p>Dead Lift(lbs): ${user.deadlift}</p>
 			  <p>Squat(lbs): ${user.squat}</p>
@@ -77,8 +77,8 @@
 			</div>
 			
 			<div data-lorem="p">		
-			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/mary.JPG"/>
-			     Mary Naanep<h4 style="float:right">(2 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			     <h4><a href="/profile/${user.id}"><span class="stick" style="border-radius:10px">			<img style="border-radius:50%;width:30px;height:30px"src="/img/mary.jpg"/>
+			     Mary Naanep<h4 style="float:right"> (0.1 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-success" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
 			  <p>Bench Press(lbs): 45</p>
 			  <p>Dead Lift(lbs): 45</p>
 			  <p>Squat(lbs): 80</p>
@@ -87,8 +87,8 @@
 			</div>
 			
 			<div data-lorem="p">		
-			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ProfileSmile.jpg"/>
-			     Carl Bishop <h4 style="float:right">(3 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			     <h4><a href="/profile/${user.id}"><span class="stick" style="border-radius:10px">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ProfileSmile.jpg"/>
+			     Carl Bishop <h4 style="float:right"> (0.1 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-success" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
 			  <p>Bench Press(lbs): 300</p>
 			  <p>Dead Lift(lbs): 260</p>
 			  <p>Squat(lbs): 400</p>
@@ -97,8 +97,8 @@
 			</div>
 			
 			<div data-lorem="p">		
-			     <h4><a href="/profile/${user.id}"><span class="stick">			<img style="border-radius:50%;width:30px;height:30px"src="/img/ProfileSmile.jpg"/>
-			     Howard Chen <h4 style="float:right">(3 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-warning" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
+			     <h4><a href="/profile/${user.id}"><span class="stick" style="border-radius:10px">			<img style="border-radius:50%;width:30px;height:30px"src="/img/howard.jpeg"/>
+			     Cean Tolentino <h4 style="float:right">(0 mi)</h4><a class="btn btn-primary" href="/user/${user.id}">Message</a><a class="btn btn-success" href="/addfriend/${user.id}">Add friend</a></span><a class="btn btn-danger" href="/block/${user.id}">Block</a></a></h4>
 			  <p>Bench Press(lbs): 150</p>
 			  <p>Dead Lift(lbs): 140</p>
 			  <p>Squat(lbs): 150</p>

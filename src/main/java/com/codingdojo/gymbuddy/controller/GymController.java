@@ -83,36 +83,38 @@ public class GymController {
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////*************** (For friend page) ////////////////////////////////////////////////////////////	
-	@RequestMapping("/user/{id}")
-	public String show(@PathVariable("id") Long id, Model model, HttpSession session,
-		@ModelAttribute("msg") Message message) {
-		User u = (User)session.getAttribute("user");
-		model.addAttribute("sender_id", (Long)session.getAttribute("userId"));
-		model.addAttribute("messages", u.getMessagesRec());
-		return "gymbuddy/wall.jsp";
-	}
-	///////////////////// Send Message To Friends ////////////////////////////////////////////////
-	@PostMapping("/user/{id}/addmsg")
-	public String message(@PathVariable("id") Long id, @Valid @ModelAttribute("msg") Message msg, BindingResult result,
-		Model model, HttpSession session) {
-		User u = (User)session.getAttribute("user");
-		model.addAttribute("user", u);
-		List<Message> messages = u.getMessagesRec();
-		model.addAttribute("messages", messages);
-		if (result.hasErrors()) {
-		System.out.println(result.getAllErrors());
-		model.addAttribute("error", "Invalid Credentials. Please try again.");
-		return "gymbuddy/wall.jsp";
-		} else {
-		msg.setReceiver(u);
-		msg.setId(null);
-		messageService.create(msg);
-//	messageService.update(msg);
-//	messages.add(msg);
-//	u.setMessages(messages);
-	return "redirect:/user/{id}";
-	}
-	}
+//	@RequestMapping("/user/{id}")
+//	public String show(@PathVariable("id") Long id, Model model, HttpSession session,
+//		@ModelAttribute("msg") Message message) {
+//		User u = (User)session.getAttribute("user");
+//		model.addAttribute("sender_id", (Long)session.getAttribute("userId"));
+//		model.addAttribute("messages", u.getMessagesRec());
+//		return "gymbuddy/wall.jsp";
+//	}
+//	///////////////////// Send Message To Friends ////////////////////////////////////////////////
+//	@PostMapping("/user/{id}/addmsg")
+//	public String message(@PathVariable("id") Long id, @Valid @ModelAttribute("msg") Message msg, BindingResult result,
+//		Model model, HttpSession session) {
+//		User u = (User)session.getAttribute("user");
+//		model.addAttribute("user", u);
+//		List<Message> messages = u.getMessagesRec();
+//		model.addAttribute("messages", messages);
+//		if (result.hasErrors()) {
+//		System.out.println(result.getAllErrors());
+//		model.addAttribute("error", "Invalid Credentials. Please try again.");
+//		return "gymbuddy/wall.jsp";
+//		} else {
+//		msg.setReceiver(u);
+//		msg.setId(null);
+//		messageService.create(msg);
+////	messageService.update(msg);
+////	messages.add(msg);
+////	u.setMessages(messages);
+//	return "redirect:/user/{id}";
+//	}
+//	}
+
+
 	//////////////////////////Add Friend/////////////////////////////////
 	@GetMapping("/addfriend/{id}")
 	public String addfriend(@PathVariable("id") Long id, @ModelAttribute("newfriendObj") User user,HttpSession session, Model model) {
@@ -139,6 +141,6 @@ public class GymController {
 	///////////////////////add picture////////////////////////
 	@GetMapping("/addpicture")
 	public String addpic() {
-		return "/gymbuddy/addpicture.jsp";
+		return "gymbuddy/addpicture.jsp";
 }
 }

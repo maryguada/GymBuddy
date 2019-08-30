@@ -130,7 +130,7 @@
 			        </p>
 			        </div>
 			        
-			        <div class="content">
+			        
 					<div class="form-group">
 					<h1>Stats</h1>
                     <p>
@@ -175,16 +175,16 @@
 			        </div>
 			        
 			        <input type="submit" value="Submit!" class="btn btn-primary" />
-			       <br><br><br>
+			       <br><br>
 			    </form:form>
-				
+				<div class="content">
 		<div style="position:fixed;bottom:0;background: #999;display: inline;padding: 5px 10px; width:82.8%">
 				<div class="row">
 				<div class="col">
 					<a href="/dash"><img src='<c:url value="https://image.flaticon.com/icons/svg/25/25694.svg"/>'height=40px width=40px/></a>
 				</div>
 				<div class="col">				
-					<a href="/message"><img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/></a>
+					<a href="/map"><img src='<c:url value="https://png.pngtree.com/svg/20160712/a7aea86d9d.png"/>'height=40px width=40px/></a>
 				</div>
 				<div class="col">
 					<a href ="/addpicture"><img src='<c:url value="https://image.flaticon.com/icons/png/512/3/3901.png"/>'height=40px width=40px/></a>
@@ -192,6 +192,7 @@
 				<div class="col">
 					<a href="/friends"><img src='<c:url value="https://www.ifsw.org/wp-content/uploads/2018/03/friends.png"/>'height=40px width=40px/></a>
 				</div>
+			</div>
 			</div>
 	</div>
 	</div>
