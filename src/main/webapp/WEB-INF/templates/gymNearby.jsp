@@ -27,7 +27,7 @@
   <body>
     <div id="map">
         <iframe width="1500" height="1000" frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed/v1/search?q=gyms+near+me&key=AIzaSyAfSEJGytZDw-hkt7zTfi7yP0THoj9ESOU" allowfullscreen>
+        src="https://www.google.com/maps/embed/v1/search?q=gyms+near+me&key=?" allowfullscreen>
         </iframe> 
     </div>
     
