@@ -5,6 +5,12 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import com.codingdojo.gymbuddy.models.Message;
+import com.codingdojo.gymbuddy.models.User;
+import com.codingdojo.gymbuddy.services.MessageService;
+import com.codingdojo.gymbuddy.services.UserService;
+import com.codingdojo.gymbuddy.validator.UserValidator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,12 +23,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.codingdojo.gymbuddy.models.Message;
-import com.codingdojo.gymbuddy.models.User;
-import com.codingdojo.gymbuddy.services.MessageService;
-import com.codingdojo.gymbuddy.services.UserService;
-import com.codingdojo.gymbuddy.validator.UserValidator;
-
 @Controller
 public class UserController {
 	@Autowired
@@ -32,25 +32,25 @@ public class UserController {
 	@Autowired
 	MessageService messageService;
 
-	///////////////////////// home///////////////////////
+//___________________ HOME ____________________//
+
 	@GetMapping("/home")
 	public String home() {
 		return "user/index.jsp";
 	}
-///////////////////////// Registration //////////////////////////////////
-
+//________________ REGISTRATION ____________________//
 	@RequestMapping("/registration")
 	public String registerForm(@ModelAttribute("user") User user) {
 		return "user/registrationPage.jsp";
 	}
-////////////////////////////Logging In ////////////////////////////////////////////////////////////
 
+//__________________ LOGGING IN  _________________//
 	@GetMapping("/login")
 	public String login(@ModelAttribute("user") User user) {
 		return "user/loginPage.jsp";
 	}
-///////////////////////// Registration Process //////////////////////////////////
 
+//______________ REGISTRATION PROCESS  _______________//
 	@PostMapping("/registration")
 	public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session,
 			RedirectAttributes errors) {
@@ -68,8 +68,8 @@ public class UserController {
 		// else, save the user in the database, save the user id in session, and
 		// redirect them to the /home route
 	}
-////////////////////////////Logging In Process////////////////////////////////////////////////////////////
 
+//______________ LOGGING IN PROCESS _________________//
 	@PostMapping("/login")
 	public String loginUser(@RequestParam("email") String email, @RequestParam("password") String password, Model model,
 			HttpSession session, RedirectAttributes errors) {
@@ -88,8 +88,7 @@ public class UserController {
 		// else, add error messages and return the login page
 	}
 
-////////////////////////////Logging Out ////////////////////////////////////////////////////////////
-
+//______________ LOGGING OUT  _________________//
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
@@ -99,10 +98,8 @@ public class UserController {
 		// redirect to login page
 	}
 
-/////////////////////////////event///////////////////////////
-////////////////////////////*************** (For friend page) ////////////////////////////////////////////////////////////	
 
-////////////////////////////*************** (For friend page) ////////////////////////////////////////////////////////////	
+//_____________ FOR FRIEND PAGE  _________________//	
 	@RequestMapping("/user/{id}")
 	public String show(@PathVariable("id") Long id, Model model, HttpSession session,
 			@ModelAttribute("msg") Message messages, @ModelAttribute("user") User user) {
@@ -114,7 +111,7 @@ public class UserController {
 		return "gymbuddy/wall.jsp";
 	}
 
-///////////////////// Send Message To Friends ////////////////////////////////////////////////
+//____________ SENDING MESSAGES TO FRIENDS  _________________//
 	@PostMapping("/user/{id}/addmsg")
 	public String message(@PathVariable("id") Long id, @Valid @ModelAttribute("msg") Message msg, @ModelAttribute("sender") User sender,BindingResult result,
 			Model model, HttpSession session) {

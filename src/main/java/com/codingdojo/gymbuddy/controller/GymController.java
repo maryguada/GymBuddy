@@ -5,6 +5,11 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import com.codingdojo.gymbuddy.models.User;
+import com.codingdojo.gymbuddy.services.MessageService;
+import com.codingdojo.gymbuddy.services.UserService;
+import com.codingdojo.gymbuddy.services.appService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,12 +21,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.codingdojo.gymbuddy.models.Message;
-import com.codingdojo.gymbuddy.models.User;
-import com.codingdojo.gymbuddy.services.MessageService;
-import com.codingdojo.gymbuddy.services.UserService;
-import com.codingdojo.gymbuddy.services.appService;
-
 @Controller
 public class GymController {
 	@Autowired
@@ -30,7 +29,7 @@ public class GymController {
 	MessageService messageService;
 	@Autowired
 	UserService userServ;
-////////////////////////////dash////////////////////////////////
+//_____________________ DASH ____________________//
 	@GetMapping("/dash")
 	public String dash(Model model,HttpSession session, @ModelAttribute("userObj")User user) {
 	    User u = (User)session.getAttribute("user");
@@ -40,7 +39,7 @@ public class GymController {
 		return "gymbuddy/dash.jsp";
 	
 	}
-/////////////////////////////my profile////////////////////////////////////
+//____________________ PROFILE ___________________//
 	@RequestMapping("/myprofile")
 	public String myprofile(Model model,HttpSession session, @ModelAttribute("user")User user) {
 		User u = (User)session.getAttribute("user");
@@ -48,7 +47,7 @@ public class GymController {
 	return "gymbuddy/myprofile.jsp";
 	
 	}
-///////////////////////////////update///////////////////////////////////////
+//___________________ UPDATE  ____________________//
 	@PostMapping("/update/{id}")
 	public String update(Model model,@PathVariable("id") Long id, @Valid @ModelAttribute("user") User user, HttpSession session, BindingResult result) {
 		User u = (User)session.getAttribute("user");
@@ -61,14 +60,15 @@ public class GymController {
 	}
 }
 	
-///////////////////////////////////search//////////////////////////////////
+//_____________________ SEARCH ____________________//
 	@PostMapping("/search")
 	public String searchUser(@RequestParam(value="user") String user, Model model) {
 	List<User> users= appServ.searchUser(user);
 	model.addAttribute("users",users);
 	return "gymbuddy/results.jsp";
 	}
-/////////////////////////////profiles////////////////////////////////////
+
+//___________________ PROFILES ____________________//
 	@GetMapping("/profile/{id}")
 	public String profiles(@PathVariable("id") Long id, Model model,HttpSession session, @ModelAttribute("user")User user) {
 		User u = (User)session.getAttribute("user");
@@ -77,9 +77,8 @@ public class GymController {
 		model.addAttribute("thisUser", thisUser);
 	return "gymbuddy/profiles.jsp";
 	}
-///////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////*************** (For friend page) ////////////////////////////////////////////////////////////	
@@ -114,8 +113,7 @@ public class GymController {
 //	}
 //	}
 
-
-	//////////////////////////Add Friend/////////////////////////////////
+//__________________  ADD A FRIEND ___________________//
 	@GetMapping("/addfriend/{id}")
 	public String addfriend(@PathVariable("id") Long id, @ModelAttribute("newfriendObj") User user,HttpSession session, Model model) {
 		User u = (User)session.getAttribute("user");
@@ -126,19 +124,20 @@ public class GymController {
 		return "gymbuddy/friends.jsp";
 	}
 	
-	///////////////////////////////MAP///////////////////////////////////
+//___________________ MAPS ____________________//
 	@GetMapping("/map")
 	public String map() {
 	return "/templates/gymNearby.jsp";
 	
 }
-	///////////////////////////////Users nearby/////////////////////////
+//______________USERS NEARBY MAPS____________________//
+
 	@GetMapping("/usersnearby")
 	public String getusersnearby() {
 	return "/templates/usersNearby.jsp";
 	
 }
-	///////////////////////add picture////////////////////////
+//________________ ADD PHOTO ____________________//
 	@GetMapping("/addpicture")
 	public String addpic() {
 		return "gymbuddy/addpicture.jsp";
